@@ -17,6 +17,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    // フォント
+    UIFont *baseFont = [UIFont fontWithName:@"rounded-mplus-1mn-regular" size:16.0f];
+
+    // 設定
+    [[UILabel appearance]setFont:baseFont];
+    [[UITextField appearance]setFont:baseFont];
+    [[UIButton appearance].titleLabel setFont:baseFont];
+
     return YES;
 }
 
