@@ -14,6 +14,7 @@
 		32B1D0DF1A8DF9F2006CB7CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32B1D0DE1A8DF9F2006CB7CD /* Images.xcassets */; };
 		32B1D0E21A8DF9F2006CB7CD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32B1D0E01A8DF9F2006CB7CD /* LaunchScreen.xib */; };
 		32B1D0EE1A8DF9F2006CB7CD /* sampleBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B1D0ED1A8DF9F2006CB7CD /* sampleBrowserTests.m */; };
+		32B1D0F91A8DFFA4006CB7CD /* rounded-mplus-1mn-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32B1D0F81A8DFFA4006CB7CD /* rounded-mplus-1mn-regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		32B1D0E71A8DF9F2006CB7CD /* sampleBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sampleBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B1D0EC1A8DF9F2006CB7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32B1D0ED1A8DF9F2006CB7CD /* sampleBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sampleBrowserTests.m; sourceTree = "<group>"; };
+		32B1D0F81A8DFFA4006CB7CD /* rounded-mplus-1mn-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rounded-mplus-1mn-regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		32B1D0D01A8DF9F2006CB7CD /* sampleBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				32B1D0F71A8DFBE1006CB7CD /* Resource */,
 				32B1D0D51A8DF9F2006CB7CD /* AppDelegate.h */,
 				32B1D0D61A8DF9F2006CB7CD /* AppDelegate.m */,
 				32B1D0D81A8DF9F2006CB7CD /* ViewController.h */,
@@ -117,6 +120,14 @@
 				32B1D0EC1A8DF9F2006CB7CD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		32B1D0F71A8DFBE1006CB7CD /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				32B1D0F81A8DFFA4006CB7CD /* rounded-mplus-1mn-regular.ttf */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32B1D0F91A8DFFA4006CB7CD /* rounded-mplus-1mn-regular.ttf in Resources */,
 				32B1D0DD1A8DF9F2006CB7CD /* Main.storyboard in Resources */,
 				32B1D0E21A8DF9F2006CB7CD /* LaunchScreen.xib in Resources */,
 				32B1D0DF1A8DF9F2006CB7CD /* Images.xcassets in Resources */,
