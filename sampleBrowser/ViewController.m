@@ -52,7 +52,8 @@
 // viewタップでキーボードの表示制御
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     if (_searchField.isFirstResponder) {
-        [self.view endEditing:YES];
+//        [self.view endEditing:YES];   // どちらでもOK
+        [_searchField resignFirstResponder];
     }
     else {
         [_searchField becomeFirstResponder];
