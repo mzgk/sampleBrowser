@@ -50,6 +50,9 @@
                             <constraint firstItem="FJ6-gN-r0K" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="h73-Aw-1yd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchField" destination="FJ6-gN-r0K" id="VzW-8b-d7a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

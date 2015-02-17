@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *searchField;
 
 @end
 
@@ -26,6 +27,8 @@
                                             selector:@selector(applicationDidBecomeActive)
                                                 name:@"applicationDidBecomeActive"
                                               object:nil];
+
+    self.searchField.delegate = self;
 }
 
 - (void)viewDidLoad {
@@ -39,10 +42,27 @@
 }
 
 - (void)applicationDidEnterBackground {
-    NSLog(@"%s", __FUNCTION__);
+
 }
 
 - (void)applicationDidBecomeActive {
-    NSLog(@"%s", __FUNCTION__);
+    [_searchField becomeFirstResponder];
 }
+
+// viewタップでキーボードの表示制御
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (_searchField.isFirstResponder) {
+        [self.view endEditing:YES];
+    }
+    else {
+        [_searchField becomeFirstResponder];
+    }
+}
+
+// 改行キーでキーボード非表示（UITextFieldDelegateを利用）
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [_searchField resignFirstResponder];
+    return YES;
+}
+
 @end
