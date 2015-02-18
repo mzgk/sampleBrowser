@@ -10,13 +10,51 @@
 
 @interface WebViewController ()
 
+@property (strong, nonatomic) WKWebView *webView;
+
 @end
 
 @implementation WebViewController
 
+- (void)loadView {
+    [super loadView];
+
+    // WKWebViewのインスタンスを生成
+    self.webView = [WKWebView new];
+    // WKWebViewのインスタンスを画面に配置（AutoLayoutより前に記述すること）
+    [self.view insertSubview:self.webView atIndex:0];
+    // フリップでの戻る／進むを有効化
+    self.webView.allowsBackForwardNavigationGestures = YES;
+
+    // AutoLayoutを使用する
+    self.webView.translatesAutoresizingMaskIntoConstraints = NO;
+    // 画面全体にWKWebViewを表示（配置する後に指定しないとThe view hierarchy is not prepared for the constraint:のワーニング）
+    [self.view addConstraints:@[
+                                [NSLayoutConstraint constraintWithItem:self.webView
+                                                             attribute:NSLayoutAttributeWidth
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:self.view
+                                                             attribute:NSLayoutAttributeWidth
+                                                            multiplier:1.0
+                                                              constant:0],
+                                [NSLayoutConstraint constraintWithItem:self.webView
+                                                             attribute:NSLayoutAttributeHeight
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:self.view
+                                                             attribute:NSLayoutAttributeHeight
+                                                            multiplier:1.0
+                                                              constant:0]
+                                ]];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    // sample用にGoogleを表示
+    NSURL *url = [NSURL URLWithString:@"https://google.co.jp"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning {
