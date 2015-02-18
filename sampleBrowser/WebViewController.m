@@ -28,7 +28,10 @@
 
     // AutoLayoutを使用する
     self.webView.translatesAutoresizingMaskIntoConstraints = NO;
-    // 画面全体にWKWebViewを表示（配置する後に指定しないとThe view hierarchy is not prepared for the constraint:のワーニング）
+    // 画面にWKWebViewを表示
+    // 配置する後に指定しないとThe view hierarchy is not prepared for the constraint:のワーニング
+    // 幅・高さは画面と同じ
+    // トップからステータスバー（20px）分を下げる
     [self.view addConstraints:@[
                                 [NSLayoutConstraint constraintWithItem:self.webView
                                                              attribute:NSLayoutAttributeWidth
@@ -43,7 +46,14 @@
                                                                 toItem:self.view
                                                              attribute:NSLayoutAttributeHeight
                                                             multiplier:1.0
-                                                              constant:0]
+                                                              constant:0],
+                                [NSLayoutConstraint constraintWithItem:self.webView
+                                                             attribute:NSLayoutAttributeTop
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:self.topLayoutGuide
+                                                             attribute:NSLayoutAttributeTop
+                                                            multiplier:1.0
+                                                              constant:20]
                                 ]];
 }
 
