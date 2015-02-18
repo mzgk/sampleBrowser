@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3239CFA81A94859100D8CA0C /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3239CFA71A94859100D8CA0C /* WebViewController.m */; };
 		32B1D0D41A8DF9F2006CB7CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B1D0D31A8DF9F2006CB7CD /* main.m */; };
 		32B1D0D71A8DF9F2006CB7CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B1D0D61A8DF9F2006CB7CD /* AppDelegate.m */; };
 		32B1D0DA1A8DF9F2006CB7CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B1D0D91A8DF9F2006CB7CD /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3239CFA61A94859100D8CA0C /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		3239CFA71A94859100D8CA0C /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		32B1D0CE1A8DF9F2006CB7CD /* sampleBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B1D0D21A8DF9F2006CB7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32B1D0D31A8DF9F2006CB7CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				32B1D0DE1A8DF9F2006CB7CD /* Images.xcassets */,
 				32B1D0E01A8DF9F2006CB7CD /* LaunchScreen.xib */,
 				32B1D0D11A8DF9F2006CB7CD /* Supporting Files */,
+				3239CFA61A94859100D8CA0C /* WebViewController.h */,
+				3239CFA71A94859100D8CA0C /* WebViewController.m */,
 			);
 			path = sampleBrowser;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 				32B1D0DA1A8DF9F2006CB7CD /* ViewController.m in Sources */,
 				32B1D0D71A8DF9F2006CB7CD /* AppDelegate.m in Sources */,
 				32B1D0D41A8DF9F2006CB7CD /* main.m in Sources */,
+				3239CFA81A94859100D8CA0C /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +432,7 @@
 				32B1D0F31A8DF9F2006CB7CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32B1D0F41A8DF9F2006CB7CD /* Build configuration list for PBXNativeTarget "sampleBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +441,7 @@
 				32B1D0F61A8DF9F2006CB7CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

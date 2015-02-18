@@ -56,6 +56,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="866" y="607"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="ZfP-Se-b0z">
+            <objects>
+                <viewController storyboardIdentifier="ID_webView" id="mFW-hM-OMk" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G28-Hk-0yX"/>
+                        <viewControllerLayoutGuide type="bottom" id="0oC-zI-w6F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xe7-IV-xwb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gfs-lh-smO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575" y="607"/>
         </scene>
     </scenes>
 </document>

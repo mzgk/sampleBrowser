@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "WebViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
@@ -63,6 +64,12 @@
 // 改行キーでキーボード非表示（UITextFieldDelegateを利用）
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [_searchField resignFirstResponder];
+
+    // WebViewを開く
+    WebViewController *webVC;
+    webVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ID_webView"];
+    [self presentViewController:webVC animated:YES completion:nil];
+
     return YES;
 }
 
